@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Security.Api.Protos";
+service Token{
+	rpc CreateToken (TokenRequest) returns (TokenResponse);
+}
+
+message TokenRequest{
+	string userid=1;
+}
+
+message TokenResponse{
+	string token = 1;
+}
+
